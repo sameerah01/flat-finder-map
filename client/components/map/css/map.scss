@@ -1,0 +1,207 @@
+.search-input{
+  z-index: 2;
+  width: 60%;
+  // left: 20%;
+  height: 60px;
+  margin-bottom: 8px;
+  border: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 0;
+  border-radius: 5px;
+  font-size: 16px !important;
+  @media (max-width: 664px) {
+    width: 100%;
+    // left: 0%;
+  }
+}
+.login{
+  height: 40px;
+  width: 100%;
+  margin-top: 40%;
+  border: 0;
+  font-size: 16px !important;
+}
+.modal-content{
+  background-color: #f3f3f3 !important;
+  border: 0;
+  position: absolute !important;
+  bottom: 0;
+  padding: 16px 0px;
+}
+.modal-dialog-centered{
+  min-height: 100% !important;
+}
+.done-btn{
+  z-index: 2;
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  width: 80%;
+  border: 0;
+  padding-left: 5px;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.search-card{
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  top: 108px;
+  width: 60%;
+  left: 20%;
+  @media only screen and (max-width: 664px) {
+    width: 100%;
+    left: 0%;
+  }
+}
+.search-result{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 0.7;
+  font-size: 16px;
+  @media only screen and (max-width: 664px) {
+    font-size: 14px;
+  }
+}
+.submit-button{
+  background-color: #f3f3f3;
+  border: 2px solid black;
+  font-weight: bold;
+  position: relative;
+  left: 25%;
+  height: 50px;
+}
+.dropdown{
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: 0;
+  border-bottom: 1px solid #f3f3f3;
+}
+.postAdBtn{
+  width: 100%;
+  border: 0;
+  height: 88px;
+  font-size: 18px;
+  padding-right: 25%;
+}
+.signInBtn{
+  position: absolute;
+  right: 19%;
+  top: 58%;
+  background-color: white !important;
+  border-radius: 25px !important;
+}
+[title="marker"]{
+  position: fixed !important;
+}
+.markerClass {
+  position: relative;
+}
+
+.markerClass:after {
+  width: 22px;
+  height: 40px;
+  display: block;
+  content: ' ';
+  position: absolute;
+  top: 50%; left: 50%;
+  margin: -40px 0 0 -11px;
+  background: url('https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png');
+  background-size: 22px 40px; 
+  pointer-events: none; 
+}
+.options-btn{
+  // height: 30%;
+}
+.rental-option{
+  margin: auto;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+.rental-option-cont{
+  background-color: white !important;
+  width: 30%;
+}
+.user-details-input{
+  width: calc(100% - 16px);
+  margin-left: 8px;
+  margin-right: 8px;
+  height: 68px;
+  left: 28px;
+  top: 46px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 0px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.menu{
+  background-color: black;
+  height: 60px;
+  width: 60px;
+}
+.menu-line{
+  width: 35px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.sidenav{
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  width: 250px;
+  transition:  ease-in-out 0.3s width;
+}
+.close{
+  margin-top: -10px !important;
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #818181;
+}
+.sidenav a:hover {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.sidenav a {
+  padding: 8px 8px 8px 24px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.edit-button{
+  background-color: #343a40 !important;
+  color: white !important;
+}
+.contact-email{
+  font-size: 12px;
+  margin-left: 10px;
+}
