@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import '/Users/Sameer/Documents/code/location-db/client/components/map/css/map.scss';
+import '../components/map/css/map.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {  UserContextProvider } from "../components/map/context/useUserAuth";
 
