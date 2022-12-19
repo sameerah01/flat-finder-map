@@ -98,7 +98,7 @@ function home(){
     let ownerIcon = 'http://localhost:9000/uploads/ownerIcon.png';
     let halfOwnerIcon = 'http://localhost:9000/uploads/halfOwnerIcon.png';
     let userLocIcon = 'http://localhost:9000/uploads/userLocIcon.png'
-    let phoneNumber = localStorage.getItem('userPhoneNumber').split('"')[1];
+    let phoneNumber = localStorage.getItem('userPhoneNumber')?.split('"')[1];
     markerList.forEach((item) => {
       const marker = new google.maps.Marker({
         map: map,
