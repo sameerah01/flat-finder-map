@@ -42,7 +42,7 @@ const submitButton = async (e) =>{
   if(userdata){
     try{
       data.append('_id', userdata._id);
-      const res = await fetch('http://localhost:9000/updateUserData', {
+      const res = await fetch('http://13.233.25.67:9000/updateUserData', {
         method: "PUT",
         body: data
       })
@@ -57,7 +57,7 @@ const submitButton = async (e) =>{
   data.append('lng', lng);
 
   try{
-    const res = await fetch('http://localhost:9000/postUserData', {
+    const res = await fetch('http://13.233.25.67:9000/postUserData', {
       method: "POST",
       body: data
     })
