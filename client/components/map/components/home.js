@@ -94,10 +94,10 @@ function home(){
   }
 
   const addMarker = (markerList) => {
-    let tenentIcon = 'http://localhost:9000/uploads/tenentIcon.png';
-    let ownerIcon = 'http://localhost:9000/uploads/ownerIcon.png';
-    let halfOwnerIcon = 'http://localhost:9000/uploads/halfOwnerIcon.png';
-    let userLocIcon = 'http://localhost:9000/uploads/userLocIcon.png'
+    let tenentIcon = 'http://13.233.25.67:9000/uploads/tenentIcon.png';
+    let ownerIcon = 'http://13.233.25.67:9000/uploads/ownerIcon.png';
+    let halfOwnerIcon = 'http://13.233.25.67:9000/uploads/halfOwnerIcon.png';
+    let userLocIcon = 'http://13.233.25.67:9000/uploads/userLocIcon.png'
     let phoneNumber = localStorage.getItem('userPhoneNumber')?.split('"')[1];
     markerList.forEach((item) => {
       const marker = new google.maps.Marker({
@@ -127,7 +127,7 @@ function home(){
   }
 
   const getLocations = async() => {
-    const data = await fetch("http://localhost:9000/getUserData");
+    const data = await fetch("http://13.233.25.67:9000/getUserData");
     data.json().then((res) => {
       setAllUsersData(res);
       addMarker(res);
@@ -148,9 +148,9 @@ function home(){
   }
 
   // const getImages = async() => {
-  //   const data = await fetch("http://localhost:9000/getUserData")
+  //   const data = await fetch("http://13.233.25.67:9000/getUserData")
   //   data.json().then((res) => {
-  //     setImgUrl("http://localhost:9000/" + res[0].propImage[1].path);
+  //     setImgUrl("http://13.233.25.67:9000/" + res[0].propImage[1].path);
   //   })
   // }
 
@@ -171,9 +171,9 @@ function home(){
                 <a href="#">Contact</a>
                 <div className="d-flex">
                   <div onClick={openLinkedIn}>
-                    <img className="ml-4 bg-light" src="http://localhost:9000/uploads/linkedin-1.png" height="22px" width="22px"/>
+                    <img className="ml-4 bg-light" src="http://13.233.25.67:9000/uploads/linkedin-1.png" height="22px" width="22px"/>
                   </div>
-                  <img className="ml-2 bg-light mt-1" src="http://localhost:9000/uploads/email-3.png" height="22px" width="22px"/>
+                  <img className="ml-2 bg-light mt-1" src="http://13.233.25.67:9000/uploads/email-3.png" height="22px" width="22px"/>
                   <div className="text-light contact-email mt-2">01ahmedsameer@gmail.com</div>
                 </div>
                 <div></div>
