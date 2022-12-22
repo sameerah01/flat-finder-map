@@ -20,7 +20,7 @@ function showDetails({allUsersData, showDetails, setShowDetails}){
 
   const deleteDetails = async () => {
     try{
-      const res = await fetch('http://localhost:9000/deleteUserData' + '/' + userData._id, {
+      const res = await fetch('http://13.233.25.67:9000/deleteUserData' + '/' + userData._id, {
         method: "DELETE",
       })
       location.reload();
@@ -58,7 +58,7 @@ function showDetails({allUsersData, showDetails, setShowDetails}){
             {userData?.propImage?.map((item) => {
               return (
                 <div className="mr-1" style={{border: '3px solid white'}}>
-                  <img src={`http://localhost:9000/${item.path}`} style={{maxHeight:"200px", maxWidth:"250px"}}/>
+                  <img src={`http://13.233.25.67:9000/${item.path}`} style={{maxHeight:"200px", maxWidth:"250px"}}/>
                 </div>)
               })}
             </div>
