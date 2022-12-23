@@ -42,7 +42,7 @@ export default function SignIn(props) {
     }
     try{
         const res = await signInResponse.confirm(otp);
-        localStorage.setItem('userPhoneNumber', JSON.stringify(res.user.phoneNumber))
+        localStorage.setItem('userPhoneNumber', res.user.phoneNumber)
         window.location = "/";
     } catch(error) {
         console.log('error', error);
