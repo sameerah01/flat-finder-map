@@ -63,7 +63,7 @@ function showDetails({allUsersData, showDetails, setShowDetails}){
               })}
             </div>
             <div className="btn bg-light mt-4 w-100">
-              {userData.telephone === localStorage.getItem('userPhoneNumber').split('"')[1] && <div className="d-flex">
+              {userData.telephone === localStorage.getItem('userPhoneNumber') && <div className="d-flex">
                   <button className="btn text-light bg-dark" style={{marginLeft: '62%'}} onClick={() => {editDetails()}}>Edit</button>
                   <button className="btn text-light bg-dark ml-2"  onClick={() => {deleteDetails()}}>Delete</button>
                 </div>}
