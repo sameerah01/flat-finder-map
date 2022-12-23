@@ -4,11 +4,11 @@ import React, {useState} from 'react';
 function getDetails({setAddDetails, rentalType, lat, lng, userdata}){
   const [error, setError] = useState('');
   const [inputData , setInputData] = useState({
-    name: userdata ? userdata.name : '',
-    telephone: userdata ? userdata.telephone : '',
-    email: userdata ? userdata.email : '',
-    propImage: userdata ? userdata.propImage : '',
-    rentalType: userdata ? userdata.rentalType : rentalType,
+    name: userdata.name ? userdata.name : '',
+    telephone: userdata.telephone ? userdata.telephone : '',
+    email: userdata.email ? userdata.email : '',
+    propImage: userdata.propImage ? userdata.propImage : '',
+    rentalType: userdata.rentalType ? userdata.rentalType : rentalType,
   })
 
 const inputsHandler = (e) =>{
@@ -19,7 +19,6 @@ const inputsHandler = (e) =>{
    }));
 }
 const submitButton = async (e) =>{
-  inputData.telephone = localStorage.getItem('userPhoneNumber').split('-')[1];
   console.log('inputData',inputData);
   debugger
   e.preventDefault();
@@ -39,10 +38,10 @@ const submitButton = async (e) =>{
       data.append(key, inputData[key]);
     }
   })
-  if(userdata){
+  if(userdata?._id){
     try{
       data.append('_id', userdata._id);
-      const res = await fetch('http://13.233.25.67:9000/updateUserData', {
+      const res = await fetch('http://localhost:9000/updateUserData', {
         method: "PUT",
         body: data
       })
@@ -57,7 +56,7 @@ const submitButton = async (e) =>{
   data.append('lng', lng);
 
   try{
-    const res = await fetch('http://13.233.25.67:9000/postUserData', {
+    const res = await fetch('http://localhost:9000/postUserData', {
       method: "POST",
       body: data
     })
@@ -110,7 +109,7 @@ const submitButton = async (e) =>{
         required
         onChange={inputsHandler}
         />
-        {inputData?.telephone && <input
+        {!inputData?.telephone && <input
         className="user-details-input"
         placeholder="Phone Number"
         name="telephone"
