@@ -73,12 +73,16 @@ function home(){
   }, [mapInit])
 
   const getCurrentLocation = (placeId) => {
+    console.log('placeId',placeId);
+    console.log('navigator',navigator);
     if(placeId){
       geocodePosition(placeId)
     } else {
     if(navigator.geolocation) {
+      console.log('navigator.geolocationAAA',navigator.geolocation);
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          console.log('position',position);
           const pos = {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
@@ -87,7 +91,9 @@ function home(){
           setLat(pos.lat);
           setLng(pos.lng);
           // marker.setPosition(pos);
-        },
+        }, (error) => {
+          console.log('error in getCurrentPosition', error);
+        }
       );
     }
     }
@@ -98,7 +104,7 @@ function home(){
     let ownerIcon = 'http://13.233.25.67:9000/uploads/ownerIcon.png';
     let halfOwnerIcon = 'http://13.233.25.67:9000/uploads/halfOwnerIcon.png';
     let userLocIcon = 'http://13.233.25.67:9000/uploads/userLocIcon.png'
-    let phoneNumber = localStorage.getItem('userPhoneNumber')?.split('"')[1];
+    let phoneNumber = localStorage.getItem('userPhoneNumber');
     markerList.forEach((item) => {
       const marker = new google.maps.Marker({
         map: map,
@@ -256,7 +262,7 @@ function home(){
                     </div>
                 )}</div>)}
               </div>
-           {addDetails && <AddDetails setAddDetails={setAddDetails} rentalType={rentalType} lat={lat} lng={lng}/>}
+           {addDetails && <AddDetails setAddDetails={setAddDetails} rentalType={rentalType} lat={lat} lng={lng} userdata={{telephone: phoneNumber}}/>}
            {showDetails.show && <Details allUsersData={allUsersData} showDetails={showDetails} setShowDetails={setShowDetails}/>}
           </div>
         </>
